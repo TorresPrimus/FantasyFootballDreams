@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using FantasyFootballDreams.WebAPI.Providers;
 using FantasyFootballDreams.WebAPI.Models;
+using FantasyFD.Data;
 
 namespace FantasyFootballDreams.WebAPI
 {
