@@ -33,7 +33,6 @@ namespace FantasyFD.Data
     }
 
 
-    // NEEDS TO BE DELETED PRIOR TO INITIAL MERGE WITH GROUP
     public class Players { } // NEEDS TO BE DELETED PRIOR TO INITIAL MERGE WITH GROUP
     public class Games { } // NEEDS TO BE DELETED PRIOR TO INITIAL MERGE WITH GROUP
 
