@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameCreate.cs" />
+    <Compile Include="GameDetail.cs" />
+    <Compile Include="GameEdit.cs" />
+    <Compile Include="GameItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
