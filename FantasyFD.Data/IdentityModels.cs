@@ -32,11 +32,12 @@ namespace FantasyFD.Data
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Player> Players { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<PlayerStats> PlayerStats { get; set; }
 
-        //public DbSet<Team> Team { get; set; }
-        //public DbSet<Players> Players { get; set; }
-        //public DbSet<Games> Games { get; set; }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
