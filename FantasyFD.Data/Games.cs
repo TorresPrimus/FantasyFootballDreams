@@ -14,14 +14,19 @@ namespace FantasyFD.Data
         public int Id { get; set; }
 
         [Required]
+
         public int HomeTeamId { get; set; }
+
+        public int TeamId { get; set; }
+
 
         [Required]
         public double HomeScore { get; set; }
 
         [Required]
+
         public int AwayTeamId { get; set; }
-        
+
         [Required]
         public double AwayScore { get; set; }
 
