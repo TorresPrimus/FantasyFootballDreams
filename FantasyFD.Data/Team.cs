@@ -21,12 +21,12 @@ namespace FantasyFD.Data
         [Display(Name = "Modified")]
         public DateTimeOffset ModifiedUtc { get; set; }
 
-        public virtual ICollection<Players> ListOfPlayers { get; set; }
+        public virtual ICollection<Player> ListOfPlayers { get; set; }
         public virtual ICollection<Games> ListOfGames { get; set; }
         
         public Team()
         {
-            ListOfPlayers = new HashSet<Players>();
+            ListOfPlayers = new HashSet<Player>();
             ListOfGames = new HashSet<Games>();
         }
 

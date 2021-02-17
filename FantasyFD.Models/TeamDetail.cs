@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FantasyFD.Models.Player;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,8 +19,8 @@ namespace FantasyFD.Models
         [Display(Name = "Modified")]
         public DateTimeOffset ModifiedUtc { get; set; }
 
-        public virtual ICollection<Players> ListOfPlayers { get; set; }
-        public virtual ICollection<Games> ListOfGames { get; set; }
+        public virtual ICollection<ListPlayer> ListOfPlayers { get; set; }
+        public virtual ICollection<GameItem> ListOfGames { get; set; }
     }
 
 }
