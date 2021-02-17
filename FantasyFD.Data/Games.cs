@@ -30,8 +30,6 @@ namespace FantasyFD.Data
         [Required]
         public DateTime DateOfGame { get; set; }
 
-        public virtual Games Game { get; set; }
-
         public virtual ICollection<Team> ListOfTeams { get; set; }
 
         public Games()
