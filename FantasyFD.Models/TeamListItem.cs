@@ -10,7 +10,6 @@ namespace FantasyFD.Models
     public class TeamListItem
     {
         public int TeamId { get; set; }
-        public int MyProperty { get; set; }
         public string TeamName { get; set; }
 
         [Display(Name = "Created")]
