@@ -62,7 +62,6 @@
     <Compile Include="Player\DetailPlayer.cs" />
     <Compile Include="Player\EditPlayer.cs" />
     <Compile Include="Player\ListPlayer.cs" />
-
     <Compile Include="GameCreate.cs" />
     <Compile Include="GameDetail.cs" />
     <Compile Include="GameEdit.cs" />
@@ -76,6 +75,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FantasyFD.Data\FantasyFD.Data.csproj">
+      <Project>{56f2d2a3-18c5-43e0-babe-789423f5489f}</Project>
+      <Name>FantasyFD.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

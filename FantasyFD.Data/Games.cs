@@ -14,14 +14,14 @@ namespace FantasyFD.Data
         public int Id { get; set; }
 
         [Required]
-        [ForeignKey(nameof(Team))]
+       // [ForeignKey(nameof(Team))]
         public int TeamId { get; set; }
 
         [Required]
         public double Score { get; set; }
 
         [Required]
-        [ForeignKey(nameof(Team))]
+       // [ForeignKey(nameof(Team))]
         public int AwayTeamId { get; set; }
         
         [Required]
@@ -34,7 +34,7 @@ namespace FantasyFD.Data
 
         public virtual ICollection<Team> ListOfTeams { get; set; }
 
-            public Team()
+            public Games()
             {
                 ListOfTeams = new HashSet<Team>();
             }
