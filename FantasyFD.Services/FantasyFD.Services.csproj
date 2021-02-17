@@ -55,10 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FantasyFD.Data\FantasyFD.Data.csproj">
+      <Project>{56f2d2a3-18c5-43e0-babe-789423f5489f}</Project>
+      <Name>FantasyFD.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FantasyFD.Models\FantasyFD.Models.csproj">
+      <Project>{0bf9e2ef-de11-4e8b-9458-bfbe4911ee98}</Project>
+      <Name>FantasyFD.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
