@@ -13,12 +13,13 @@ namespace FantasyFD.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public int HomeScore { get; set; }
+        public double HomeScore { get; set; }
         [Required]
-        public int AwayScore { get; set; }
+        public double AwayScore { get; set; }
         [Required]
         public int HomeTeamId { get; set; }
         [Required]
         public int AwayTeamId { get; set; }
+        public DateTime DateOfGame { get; set; }
     }
 }

@@ -14,10 +14,14 @@ namespace FantasyFD.Data
         public int Id { get; set; }
 
         [Required]
+
+        public int HomeTeamId { get; set; }
+
         public int TeamId { get; set; }
 
+
         [Required]
-        public double Score { get; set; }
+        public double HomeScore { get; set; }
 
         [Required]
 
@@ -31,9 +35,9 @@ namespace FantasyFD.Data
 
         public virtual ICollection<Team> ListOfTeams { get; set; }
 
-        public Games()
-        {
-            ListOfTeams = new HashSet<Team>();
-        }
+            public Games()
+            {
+                ListOfTeams = new HashSet<Team>();
+            }
     }
 }
