@@ -11,7 +11,7 @@ namespace FantasyFD.Data
     public class Player
     {
         [Key]
-        public int PlayerID { get; set; }
+        public int PlayerId { get; set; }
 
         [Required]
         public string PlayerFirstName { get; set; }

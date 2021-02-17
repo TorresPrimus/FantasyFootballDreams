@@ -12,7 +12,7 @@ namespace FantasyFD.Data
     {
         [Key]
         public int PlayerStatsID { get; set; }
-
+        public int PlayerStatsId { get; set; }
         [Required]
         public int PassingYards { get; set; }
         [Required]
