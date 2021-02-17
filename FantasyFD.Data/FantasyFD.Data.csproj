@@ -95,15 +95,5 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FantasyFD.Models\FantasyFD.Models.csproj">
-      <Project>{0bf9e2ef-de11-4e8b-9458-bfbe4911ee98}</Project>
-      <Name>FantasyFD.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FantasyFD.Services\FantasyFD.Services.csproj">
-      <Project>{98db4bc1-f999-4000-a83b-ea65fb955610}</Project>
-      <Name>FantasyFD.Services</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
