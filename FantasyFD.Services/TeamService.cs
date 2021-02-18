@@ -1,4 +1,4 @@
-﻿using FantasyFD.Data;
+using FantasyFD.Data;
 using FantasyFD.Models;
 using System;
 using System.Collections.Generic;
