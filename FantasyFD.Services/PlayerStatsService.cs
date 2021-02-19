@@ -95,7 +95,7 @@ namespace FantasyFD.Services
                 var entity =
                     ctx
                         .PlayerStats
-                        .Single(e => e.PlayerStatsID == playerStatsId);
+                        .Single(e => e.PlayerStatsId == playerStatsId);
                 return
                     new DetailPlayerStats
                     {
@@ -129,8 +129,8 @@ namespace FantasyFD.Services
                 var entity =
                     ctx
                         .PlayerStats
-                        .Single(e => e.PlayerStatsID == model.PlayerStatsId);
-                entity.PlayerStatsID = model.PlayerStatsId;
+                        .Single(e => e.PlayerStatsId == model.PlayerStatsId);
+                entity.PlayerStatsId = model.PlayerStatsId;
                 entity.PlayerId = model.PlayerId;
                 entity.PassingYards = model.PassingYards;
                 entity.PassingTouchdowns = model.PassingTouchdowns;
@@ -160,7 +160,7 @@ namespace FantasyFD.Services
                 var entity =
                     ctx
                         .PlayerStats
-                        .Single(e => e.PlayerStatsID == playerStatsId);
+                        .Single(e => e.PlayerStatsId == playerStatsId);
                 ctx.PlayerStats.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
