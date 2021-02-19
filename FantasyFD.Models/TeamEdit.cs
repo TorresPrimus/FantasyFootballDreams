@@ -8,6 +8,7 @@ namespace FantasyFD.Models
 {
     public class TeamEdit
     {
+        public Guid UserId { get; set; }
         public int TeamId { get; set; }
         public string TeamName { get; set; }
     }

@@ -11,7 +11,7 @@ namespace FantasyFD.Models
     public class TeamDetail
     {
         public int TeamId { get; set; }
-
+        public Guid UserId { get; set; }
         public string TeamName { get; set; }
 
         [Display(Name = "Created")]
