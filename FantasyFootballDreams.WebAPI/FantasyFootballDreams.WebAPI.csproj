@@ -206,11 +206,14 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GameController.cs" />
+    <Compile Include="Controllers\GameViewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\PlayerStatsController.cs" />
     <Compile Include="Controllers\PlayerStatsViewController.cs" />
     <Compile Include="Controllers\PlayerViewController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -284,6 +287,7 @@
     <Folder Include="Views\PlayerStats\" />
     <Folder Include="Views\PlayerView\" />
     <Folder Include="Views\Player\" />
+    <Folder Include="Views\Team\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

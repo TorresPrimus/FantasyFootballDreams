@@ -1,4 +1,4 @@
-﻿using FantasyFD.Data;
+using FantasyFD.Data;
 using FantasyFD.Models;
 using System;
 using System.Collections.Generic;
@@ -80,9 +80,9 @@ namespace FantasyFD.Services
                         .Teams
                         .Single(e => e.TeamId == model.TeamId);
 
-                entity.TeamName = model.TeamName;
+                    entity.TeamName = model.TeamName;
 
-                return ctx.SaveChanges() == 1;
+            return ctx.SaveChanges() == 1;
             }
         }
         public bool DeleteTeam(int teamId)

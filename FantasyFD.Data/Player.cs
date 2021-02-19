@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FantasyFD.Data
-{
+{//wack
     public class Player
     {
         [Key]
