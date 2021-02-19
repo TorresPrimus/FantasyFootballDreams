@@ -8,7 +8,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 
 namespace FantasyFootballDreams.WebAPI.Controllers
-{
+{/// <summary>
+/// wack
+/// </summary>
     public class PlayerController : ApiController
     {
         private PlayerService CreatePlayerService()
