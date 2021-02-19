@@ -9,99 +9,113 @@ using System.Threading.Tasks;
 namespace FantasyFD.Services
 {
     public class GameService
-        {
-            public bool CreateGame(GameCreate Model)
-            {
-                var entity =
-                    new Games()
-                    {
-                        HomeTeamId = Model.HomeTeamId,
-                        HomeScore = Model.HomeScore,
-                        AwayTeamId = Model.AwayTeamId,
-                        AwayScore = Model.AwayScore,
-                        DateOfGame = Model.DateOfGame,
-                    };
+    {
+        private readonly int _gameId;
 
-                using (var ctx = new ApplicationDbContext())
+        public GameService(int gameId)
+        {
+            _gameId = gameId;
+        }
+        public GameService()
+        {
+        }
+
+        public bool CreateGame(GameCreate Model)
+        {
+            var entity =
+                new Games()
                 {
-                    ctx.Games.Add(entity);
-                    return ctx.SaveChanges() == 1;
-                }
+                    HomeTeamId = Model.HomeTeamId,
+                    HomeScore = Model.HomeScore,
+                    AwayTeamId = Model.AwayTeamId,
+                    AwayScore = Model.AwayScore,
+                    DateOfGame = Model.DateOfGame,
+                };
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Games.Add(entity);
+                return ctx.SaveChanges() == 1;
             }
-            public IEnumerable<GameItem> GetGame()
+        }
+            public IEnumerable<GameItem> GetGames()
             {  
                 using (var ctx = new ApplicationDbContext())
                 {
-                var query =
-                    ctx
-                    .Games
-                    .Select(
-                        e =>
-                        new GameItem
-                        {
-                            Id = e.Id,
-                            HomeTeamId = e.HomeTeamId,
-                            AwayTeamId = e.AwayTeamId,
-                            HomeScore = e.HomeScore,
-                            AwayScore = e.AwayScore,
-                            DateOfGame = e.DateOfGame,
-                        }
+                    var query =
+                        ctx
+                        .Games
+                        .Where(e => e.GameId == _gameId)
+                        .Select(
+                            e =>
+                                new GameItem
+                                {
+                                    GameId = e.GameId,
+                                    HomeTeamId = e.HomeTeamId,
+                                    AwayTeamId = e.AwayTeamId,
+                                    HomeScore = e.HomeScore,
+                                    AwayScore = e.AwayScore,
+                                    DateOfGame = e.DateOfGame,
+                                }
                         );
+
                     return query.ToArray();
                 }
 
             }
-            public GameDetail GetGameById(int id)
+
+            public GameDetail GetGameById(int gameId)
             {
                 using (var ctx = new ApplicationDbContext())
                 {
                     var entity =
                         ctx
-                        .Games
-                        .Single(e => e.Id == id);
-                return
-                    new GameDetail
-                    {
-                        Id = entity.Id,
-                        HomeTeamId = entity.HomeTeamId,
-                        HomeScore = entity.HomeScore,
-                        AwayTeamId = entity.AwayTeamId,
-                        AwayScore = entity.AwayScore,
-                        DateOfGame = entity.DateOfGame,
-                    };
+                            .Games
+                            .Single(e => e.GameId == gameId);
+                    return
+                        new GameDetail
+                        {
+                            GameId = entity.GameId,
+                            HomeTeamId = entity.HomeTeamId,
+                            HomeScore = entity.HomeScore,
+                            AwayTeamId = entity.AwayTeamId,
+                            AwayScore = entity.AwayScore,
+                            DateOfGame = entity.DateOfGame,
+                        };
                 }
             }
+
             public bool UpdateGame(GameEdit model)
             {
                 using (var ctx = new ApplicationDbContext())
                 {
-                var entity =
-                    ctx
-                    .Games
-                    .Single(e => e.Id == model.Id);
+                    var entity =
+                        ctx
+                            .Games
+                            .Single(e => e.GameId == model.GameId);
 
-                entity.HomeTeamId = model.HomeTeamId;
-                entity.HomeScore = model.HomeScore;
-                entity.AwayTeamId = model.AwayTeamId;
-                entity.AwayScore = model.AwayScore;
-                entity.DateOfGame = model.DateOfGame;
+                        entity.HomeTeamId = model.HomeTeamId;
+                        entity.HomeScore = model.HomeScore;
+                        entity.AwayTeamId = model.AwayTeamId;
+                        entity.AwayScore = model.AwayScore;
+                        entity.DateOfGame = model.DateOfGame;
 
                 return ctx.SaveChanges() == 1;
                 }
             }
             
-            public bool DeleteGame(int Id)
+            public bool DeleteGame(int gameId)
             {
                 using (var ctx = new ApplicationDbContext())
                 {
-                var entity =
-                    ctx
-                    .Games
-                    .Single(e => e.Id == Id);
+                    var entity =
+                        ctx
+                            .Games
+                            .Single(e => e.GameId == gameId);
 
-                ctx.Games.Remove(entity);
+                    ctx.Games.Remove(entity);
 
-                return ctx.SaveChanges() == 1;
+                    return ctx.SaveChanges() == 1;
                 }
             }
     }

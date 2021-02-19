@@ -11,7 +11,7 @@ namespace FantasyFD.Data
     public class Games
     {
         [Key]
-        public int Id { get; set; }
+        public int GameId { get; set; }
 
         [Required]
 
