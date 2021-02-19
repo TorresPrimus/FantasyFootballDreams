@@ -10,11 +10,11 @@ namespace FantasyFD.Services
 {
     public class TeamService
     {
-        private readonly int _teamId;
+        private readonly Guid _userId;
 
-        public TeamService(int teamId)
+        public TeamService(Guid userId)
         {
-            _teamId = teamId;
+            _userId = userId;
         }
 
         public bool CreateTeam(TeamCreate model)
@@ -37,7 +37,7 @@ namespace FantasyFD.Services
                 var query =
                     ctx
                         .Teams
-                        .Where(e => e.TeamId == _teamId)
+                        .Where(e => e.UserId == _userId)
                         .Select(
                             e =>
                                 new TeamListItem

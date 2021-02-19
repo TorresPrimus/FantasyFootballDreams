@@ -15,8 +15,8 @@ namespace FantasyFootballDreams.WebAPI.Controllers
     {
         private TeamService CreateTeamService()
         {
-            var userId = int.Parse(User.Identity.GetUserId());
-            var teamService = new TeamService(userId);
+            var userName = Guid.Parse(User.Identity.GetUserId());
+            var teamService = new TeamService(userName);
             return teamService;
         }
         public IHttpActionResult Get()

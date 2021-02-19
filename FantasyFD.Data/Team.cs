@@ -16,6 +16,8 @@ namespace FantasyFD.Data
         [Required]
         public string TeamName { get; set; }
 
+        public Guid UserId { get; set; }
+
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]

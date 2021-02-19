@@ -86,6 +86,15 @@
   <ItemGroup>
     <Compile Include="Games.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202102190108349_InitialCreate.cs" />
+    <Compile Include="Migrations\202102190108349_InitialCreate.Designer.cs">
+      <DependentUpon>202102190108349_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102190202234_added.guid.teams.cs" />
+    <Compile Include="Migrations\202102190202234_added.guid.teams.Designer.cs">
+      <DependentUpon>202102190202234_added.guid.teams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +103,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202102190108349_InitialCreate.resx">
+      <DependentUpon>202102190108349_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102190202234_added.guid.teams.resx">
+      <DependentUpon>202102190202234_added.guid.teams.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
