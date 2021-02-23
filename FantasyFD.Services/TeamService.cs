@@ -22,7 +22,9 @@ namespace FantasyFD.Services
             var entity =
                 new Team()
                 {
-                    TeamName = model.TeamName
+                    TeamName = model.TeamName,
+                    CreatedUtc = DateTimeOffset.Now,
+                    ModifiedUtc = DateTimeOffset.Now
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -37,13 +39,13 @@ namespace FantasyFD.Services
                 var query =
                     ctx
                         .Teams
-                        .Where(e => e.UserId == _userId)
                         .Select(
                             e =>
                                 new TeamListItem
                                 {
                                     TeamId = e.TeamId,
                                     TeamName = e.TeamName,
+                                    UserId = e.UserId
                                 }
                         );
 
