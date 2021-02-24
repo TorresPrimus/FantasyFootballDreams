@@ -45,7 +45,6 @@ namespace FantasyFD.Services
                     var query =
                         ctx
                         .Games
-                        .Where(e => e.GameId == _gameId)
                         .Select(
                             e =>
                                 new GameItem
