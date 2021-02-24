@@ -1,5 +1,6 @@
 using FantasyFD.Data;
 using FantasyFD.Models;
+using FantasyFD.Models.Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +62,26 @@ namespace FantasyFD.Services
                     ctx
                         .Teams
                         .Single(e => e.TeamId == teamId);
+                ICollection<ListPlayer> player = entity.ListOfPlayers
+        .Select(
+            e =>
+                new ListPlayer
+                {
+                    PlayerId = e.PlayerId,
+                    TeamID = e.TeamId,
+                    TeamName = e.Team.TeamName,
+                    PlayerFirstName = e.PlayerFirstName,
+                    PlayerLastName = e.PlayerLastName
+                }
+            ).ToList();
+                ICollection<GameItem> game = entity.ListOfGames
+        .Select(
+                    e =>
+                new GameItem
+                {
+                    GameId = e.GameId
+                }
+            ).ToList();
                 return
                     new TeamDetail
                     {
@@ -68,8 +89,8 @@ namespace FantasyFD.Services
                         TeamName = entity.TeamName,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc,
-                        ListOfPlayers = (ICollection<Models.Player.ListPlayer>)entity.ListOfPlayers,
-                        ListOfGames = (ICollection<GameItem>)entity.ListOfGames,
+                        ListOfPlayers = player,
+                        ListOfGames = game,
                     };
             }
         }
@@ -82,9 +103,9 @@ namespace FantasyFD.Services
                         .Teams
                         .Single(e => e.TeamId == model.TeamId);
 
-                    entity.TeamName = model.TeamName;
+                entity.TeamName = model.TeamName;
 
-            return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() == 1;
             }
         }
         public bool DeleteTeam(int teamId)
