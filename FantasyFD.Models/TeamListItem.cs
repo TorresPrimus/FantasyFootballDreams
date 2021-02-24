@@ -13,9 +13,5 @@ namespace FantasyFD.Models
         public int TeamId { get; set; }
         public string TeamName { get; set; }
 
-        [Display(Name = "Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-        [Display(Name = "Modified")]
-        public DateTimeOffset ModifiedUtc { get; set; }
     }
 }

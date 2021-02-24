@@ -11,6 +11,5 @@ namespace FantasyFD.Models
     {
         [Required, MinLength(2, ErrorMessage = "Please enter at least 2 characters."), MaxLength(50, ErrorMessage = "50 character limit has been breached.")]
         public string TeamName { get; set; }
-
     }
 }
