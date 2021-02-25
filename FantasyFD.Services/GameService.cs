@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace FantasyFD.Services
 {
     public class GameService
@@ -18,13 +19,14 @@ namespace FantasyFD.Services
         }
         public GameService()
         {
-        }
 
+        }
         public bool CreateGame(GameCreate Model)
         {
             var entity =
                 new Games()
                 {
+                    GameId = Model.GameId,
                     HomeTeamId = Model.HomeTeamId,
                     HomeScore = Model.HomeScore,
                     AwayTeamId = Model.AwayTeamId,
@@ -94,6 +96,7 @@ namespace FantasyFD.Services
                             .Games
                             .Single(e => e.GameId == model.GameId);
 
+                        entity.GameId = model.GameId;
                         entity.HomeTeamId = model.HomeTeamId;
                         entity.HomeScore = model.HomeScore;
                         entity.AwayTeamId = model.AwayTeamId;

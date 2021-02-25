@@ -16,7 +16,9 @@ namespace FantasyFootballDreams.WebAPI.Controllers
     {
         private GameService CreateGameService()
         {
-            return new GameService();
+            var gameId = int.Parse(User.Identity.GetUserId());
+            var gameService = new GameService(gameId);
+            return  new GameService();
         }
 
         public IHttpActionResult Get()
@@ -26,13 +28,14 @@ namespace FantasyFootballDreams.WebAPI.Controllers
             return Ok(games);
         }
 
-        public IHttpActionResult Post(GameCreate game)
+        public IHttpActionResult Post(GameCreate games)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
             var service = CreateGameService();
 
-            if (!service.CreateGame(game))
+            if (!service.CreateGame(games))
                 return InternalServerError();
             return Ok();
         }
