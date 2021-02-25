@@ -11,7 +11,7 @@ namespace FantasyFD.Models
     {
 
         [Key]
-        public int Id { get; set; }
+        public int GameId { get; set; }
         [Required]
         public double HomeScore { get; set; }
         [Required]
