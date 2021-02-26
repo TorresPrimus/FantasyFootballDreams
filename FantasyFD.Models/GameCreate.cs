@@ -11,7 +11,9 @@ namespace FantasyFD.Models
     {
 
         [Key]
+
         public int Id { get; set; }
+
         public DateTime DateOfGame { get; set; }
     }
 }

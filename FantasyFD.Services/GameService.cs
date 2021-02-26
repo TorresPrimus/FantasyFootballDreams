@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace FantasyFD.Services
 {
     public class GameService
@@ -18,6 +19,7 @@ namespace FantasyFD.Services
         }
         public GameService()
         {
+
         }
         public bool ConnectTeamWithGame(int gameId, AwayHome model)
         {
@@ -50,6 +52,7 @@ namespace FantasyFD.Services
 
                 return ctx.SaveChanges() >= 1;
             }
+
         }
         public bool CreateGame(GameCreate Model)
         {
@@ -120,11 +123,13 @@ namespace FantasyFD.Services
                         .Games
                         .Single(e => e.GameId == model.GameId);
 
+
                 entity.HomeTeamId = model.HomeTeamId;
                 entity.HomeScore = model.HomeScore;
                 entity.AwayTeamId = model.AwayTeamId;
                 entity.AwayScore = model.AwayScore;
                 entity.DateOfGame = model.DateOfGame;
+
 
                 return ctx.SaveChanges() == 1;
             }

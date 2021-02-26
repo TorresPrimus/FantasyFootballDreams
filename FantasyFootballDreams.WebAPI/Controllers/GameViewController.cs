@@ -8,7 +8,6 @@ using System.Web;
 
 namespace FantasyFootballDreams.WebAPI.Controllers
 {
-    [Authorize]
     public class GameViewController : Controller
     {
         public ActionResult Index()
@@ -58,10 +57,10 @@ namespace FantasyFootballDreams.WebAPI.Controllers
             }
         }
         [HttpGet]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int gameId)
         {
             GameService gameService = new GameService();
-            return View(gameService.GetGameById(id));
+            return View(gameService.GetGameById(gameId));
         }
         [HttpPost]
         public ActionResult DeleteGame(int id)
