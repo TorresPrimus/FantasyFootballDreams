@@ -23,6 +23,7 @@ namespace FantasyFD.Services
             var entity =
                 new Team()
                 {
+                    UserId = _userId,
                     TeamName = model.TeamName,
                     CreatedUtc = DateTimeOffset.Now,
                     ModifiedUtc = DateTimeOffset.Now

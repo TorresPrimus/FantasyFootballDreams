@@ -20,6 +20,15 @@ namespace FantasyFootballDreams.WebAPI.Controllers
             var gameService = new GameService(gameId);
             return  new GameService();
         }
+        public IHttpActionResult PutTeamsWithAGame(int gameId, AwayHome model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateGameService();
+            if (!service.ConnectTeamWithGame(gameId,model))
+                return InternalServerError();
+            return Ok();
+        }
 
         public IHttpActionResult Get()
         {
