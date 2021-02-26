@@ -48,7 +48,18 @@ namespace FantasyFD.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            //modelBuilder.Entity<Team>()
+            //    .HasMany<Games>(s => s.ListOfGames)
+            //    .WithMany(c => c.ListOfTeams)
+            //    .Map(cs =>
+            //    {
+            //        cs.MapLeftKey("GameId");
+            //        cs.MapRightKey("TeamId");
+            //        cs.ToTable("TeamGames");
+            //    });
         }
+
         public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
         {
             public IdentityUserLoginConfiguration()

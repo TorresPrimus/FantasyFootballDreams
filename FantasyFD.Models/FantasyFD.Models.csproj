@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AwayHome.cs" />
     <Compile Include="PlayerStats\CreatePlayerStats.cs" />
     <Compile Include="PlayerStats\DetailPlayerStats.cs" />
     <Compile Include="PlayerStats\EditPlayerStats.cs" />

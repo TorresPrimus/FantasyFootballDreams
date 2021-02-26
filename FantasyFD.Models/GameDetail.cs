@@ -10,9 +10,9 @@ namespace FantasyFD.Models
     public class GameDetail
     {
         public int GameId { get; set; }
-        public int HomeTeamId { get; set; }
+        public int? HomeTeamId { get; set; }
         public double HomeScore { get; set; }
-        public int AwayTeamId { get; set; }
+        public int? AwayTeamId { get; set; }
         public double AwayScore { get; set; }
         [Display(Name = "Game Score")]
         public DateTime DateOfGame { get; set; }
