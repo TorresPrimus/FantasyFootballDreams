@@ -18,14 +18,14 @@ namespace FantasyFootballDreams.WebAPI.Controllers
             //return playerStatsService;
             return new PlayerStatsService();
         }
-        /// Looks up all Player Stats.
+        /// <summary> Looks up all Player Stats. </summary>
         public IHttpActionResult Get()
         {
             PlayerStatsService playerStatsService = CreatePlayerStatsService();
             var playerStats = playerStatsService.GetPlayerStats();
             return Ok(playerStats);
         }
-        /// Creates a Player Stat with specific information.
+        /// <summary> Creates a Player Stat with specific information. </summary>
         public IHttpActionResult Post(CreatePlayerStats playerStats)
         {
             if (!ModelState.IsValid)
@@ -35,14 +35,14 @@ namespace FantasyFootballDreams.WebAPI.Controllers
                 return InternalServerError();
             return Ok();
         }
-        /// Looks up a Player Stat by its ID.
+        /// <summary> Looks up a Player Stat by its ID. </summary>
         public IHttpActionResult Get(int id)
         {
             PlayerStatsService playerStatsService = CreatePlayerStatsService();
             var playerStats = playerStatsService.GetPlayerStatsByID(id);
             return Ok(playerStats);
         }
-        /// Changes details about a Player Stat.
+        /// <summary> Changes details about a Player Stat. </summary>
         public IHttpActionResult Put(EditPlayerStats playerStats)
         {
             if (!ModelState.IsValid)
@@ -52,7 +52,7 @@ namespace FantasyFootballDreams.WebAPI.Controllers
                 return InternalServerError();
             return Ok();
         }
-        /// Deletes Player Stats by their ID.
+        /// <summary>Deletes Player Stats by their ID.</summary>
         public IHttpActionResult Delete(int id)
         {
             var service = CreatePlayerStatsService();
