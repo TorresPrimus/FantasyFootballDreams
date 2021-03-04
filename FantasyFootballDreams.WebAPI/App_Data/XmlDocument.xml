@@ -512,19 +512,31 @@
             </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Get">
-            Looks up all Player Stats.
+            <summary> Looks up all Player Stats. </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Post(FantasyFD.Models.PlayerStats.CreatePlayerStats)">
-            Creates a Player Stat with specific information.
+            <summary> Creates a Player Stat with specific information. </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Get(System.Int32)">
-            Looks up a Player Stat by its ID.
+            <summary> Looks up a Player Stat by its ID. </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Put(FantasyFD.Models.PlayerStats.EditPlayerStats)">
-            Changes details about a Player Stat.
+            <summary> Changes details about a Player Stat. </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Delete(System.Int32)">
-            Deletes Player Stats by their ID.
+            <summary>Deletes Player Stats by their ID.</summary>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsViewController.Create">
+            <summary>
+            LOOKUP: redirect to action (take to another page)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerViewController.Index">
+            <summary>GET: PlayerView </summary>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerViewController.Create">
+            <summary>This is where I get html from </summary> Create
         </member>
         <member name="T:FantasyFootballDreams.WebAPI.Controllers.TeamController">
             <summary>

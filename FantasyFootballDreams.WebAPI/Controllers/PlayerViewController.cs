@@ -11,21 +11,21 @@ namespace FantasyFootballDreams.WebAPI.Controllers
     //[Authorize]
     public class PlayerViewController : Controller
     {
-        //GET: PlayerView
+        /// <summary>GET: PlayerView </summary>
         public ActionResult Index()
         {
             PlayerService playerService = new PlayerService();
             return View(playerService.GetPlayer());
         }
 
-        //Create
-        [HttpGet] //This is where I get html from
+        /// <summary>This is where I get html from </summary> Create
+        [HttpGet] //
         public ActionResult Create()
         {
             return View();
         }
 
-        [HttpPost] //This is where it posts upon submit
+        [HttpPost] /// <summary>This is where it posts upon submit </summary>
         public ActionResult Create(CreatePlayer cp)
         {
             if (this.ModelState.IsValid)

@@ -18,6 +18,10 @@ namespace FantasyFootballDreams.WebAPI.Controllers
         }
 
         //Create
+        /// <summary>
+        /// LOOKUP: redirect to action (take to another page)
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Create()
         {
@@ -30,7 +34,7 @@ namespace FantasyFootballDreams.WebAPI.Controllers
             {
                 PlayerStatsController psc = new PlayerStatsController();
                 psc.Post(cps);
-                return RedirectToAction("Index", "Home"); //LOOKUP: redirect to action (take to another page) 
+                return RedirectToAction("Index", "Home");  
             }
             else
             {
