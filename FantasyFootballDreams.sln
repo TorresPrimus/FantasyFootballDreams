@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyFD.Models", "Fantasy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyFD.Services", "FantasyFD.Services\FantasyFD.Services.csproj", "{98DB4BC1-F999-4000-A83B-EA65FB955610}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyFD.GamePlayer", "FantasyFD.GamePlayer\FantasyFD.GamePlayer.csproj", "{2E914000-B5E9-4CB7-86BF-93D3AE07479C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{98DB4BC1-F999-4000-A83B-EA65FB955610}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98DB4BC1-F999-4000-A83B-EA65FB955610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98DB4BC1-F999-4000-A83B-EA65FB955610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E914000-B5E9-4CB7-86BF-93D3AE07479C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E914000-B5E9-4CB7-86BF-93D3AE07479C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E914000-B5E9-4CB7-86BF-93D3AE07479C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E914000-B5E9-4CB7-86BF-93D3AE07479C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
