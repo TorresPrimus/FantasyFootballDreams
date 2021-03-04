@@ -65,3 +65,4 @@ https://stackoverflow.com/questions/1256757/sequence-contains-more-than-one-elem
 https://stackoverflow.com/questions/22691622/sequence-contains-more-than-one-element-singleordefault-not-helping
 https://www.codeproject.com/Questions/806655/Sequence-contains-more-than-one-element
 https://forums.asp.net/t/2015180.aspx?Two+foreign+keys+referencing+1+class+issue
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages#adding-api-documentation
