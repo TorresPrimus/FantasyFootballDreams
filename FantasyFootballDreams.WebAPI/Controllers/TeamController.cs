@@ -10,6 +10,9 @@ using System.Web.Http;
 
 namespace FantasyFootballDreams.WebAPI.Controllers
 {
+    /// <summary>
+    /// The Main Team Controller Class
+    /// </summary>
     [Authorize]
     public class TeamController : ApiController
     {
@@ -19,12 +22,19 @@ namespace FantasyFootballDreams.WebAPI.Controllers
             var teamService = new TeamService(userName);
             return teamService;
         }
+        /// <summary>
+        /// This allows you to get all the Teams from the database.
+        /// </summary>
+        /// <returns></returns>
         public IHttpActionResult Get()
         {
             TeamService teamService = CreateTeamService();
             var teams = teamService.GetTeams();
             return Ok(teams);
         }
+        /// <summary>
+        /// This allows you to create a new team in the database.
+        /// </summary>
         public IHttpActionResult Post(TeamCreate team)
         {
             if (!ModelState.IsValid)
@@ -37,12 +47,22 @@ namespace FantasyFootballDreams.WebAPI.Controllers
 
             return Ok();
         }
+        /// <summary>
+        /// This allows you to get a specific team by their ID.
+        /// </summary>
+        /// <param name="teamId"></param>
+        /// <returns></returns>
         public IHttpActionResult Get(int teamId)
         {
             TeamService teamService = CreateTeamService();
             var team = teamService.GetTeamById(teamId);
             return Ok(team);
         }
+        /// <summary>
+        /// This allows you to update a teams name.
+        /// </summary>
+        /// <param name="team"></param>
+        /// <returns></returns>
         public IHttpActionResult Put(TeamEdit team)
         {
             if (!ModelState.IsValid)
@@ -55,6 +75,11 @@ namespace FantasyFootballDreams.WebAPI.Controllers
 
             return Ok();
         }
+        /// <summary>
+        /// This allows you to delete a team from the database by their ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public IHttpActionResult Delete(int id)
         {
             var teamService = CreateTeamService();
