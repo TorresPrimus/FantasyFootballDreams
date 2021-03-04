@@ -15,7 +15,7 @@ There are two ways to obtain the code. You can download the project as a zip fil
 
 Once you have the project open there are two aspects to this project. There is an API which accessible using the Postman utility or through the launch page in your browser. Through this API you can view, delete, edit, and create players. Each player has a list of realistic stats. Each player is also assigned to a team which is completely customizable.
 
-The console application is a proof of concept that mirrors our api Player/Team structure and allows you to create a fantasy matchup between the teams of your choice.
+The console application is a proof of concept that mirrors our api Player/Team structure and allows you to create a fantasy matchup between the teams of your choice. To launch the cconsole app set fasntasyFD.Gameplayer as start up and launch the api, it will open a console app where you can play the game
 
 API Endpoints
 One you register and receive a token you have access to the API.
