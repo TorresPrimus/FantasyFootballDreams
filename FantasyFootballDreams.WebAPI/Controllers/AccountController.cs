@@ -53,6 +53,10 @@ namespace FantasyFootballDreams.WebAPI.Controllers
         public ISecureDataFormat<AuthenticationTicket> AccessTokenFormat { get; private set; }
 
         // GET api/Account/UserInfo
+        /// <summary>
+        /// Get user account info.
+        /// </summary>
+        /// <returns></returns>
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
         [Route("UserInfo")]
         public UserInfoViewModel GetUserInfo()
@@ -116,6 +120,11 @@ namespace FantasyFootballDreams.WebAPI.Controllers
         }
 
         // POST api/Account/ChangePassword
+        /// <summary>
+        /// CHange users password.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [Route("ChangePassword")]
         public async Task<IHttpActionResult> ChangePassword(ChangePasswordBindingModel model)
         {
@@ -136,6 +145,11 @@ namespace FantasyFootballDreams.WebAPI.Controllers
         }
 
         // POST api/Account/SetPassword
+        /// <summary>
+        /// First initialization of users password.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [Route("SetPassword")]
         public async Task<IHttpActionResult> SetPassword(SetPasswordBindingModel model)
         {
@@ -193,6 +207,11 @@ namespace FantasyFootballDreams.WebAPI.Controllers
         }
 
         // POST api/Account/RemoveLogin
+        /// <summary>
+        /// Remove user account and login capabilities.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [Route("RemoveLogin")]
         public async Task<IHttpActionResult> RemoveLogin(RemoveLoginBindingModel model)
         {
@@ -320,6 +339,11 @@ namespace FantasyFootballDreams.WebAPI.Controllers
         }
 
         // POST api/Account/Register
+        /// <summary>
+        /// Register new account and assign Token.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)

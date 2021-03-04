@@ -481,6 +481,53 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:FantasyFootballDreams.WebAPI.Controllers.GameController">
+            <summary>
+            Game Controller
+            </summary>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.GameController.PutTeamsWithAGame(System.Int32,FantasyFD.Models.AwayHome)">
+            <summary>
+            Allows you to get a certian game by its ID. 
+            </summary>
+            <param name="gameId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.GameController.Get">
+            <summary>
+            Places teams as Home and Away teams in a given game. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.GameController.Post(FantasyFD.Models.GameCreate)">
+            <summary>
+            Shows a list of games.  
+            </summary>
+            <param name="games"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.GameController.Get(System.Int32)">
+            <summary>
+            Posts the game results.
+            </summary>
+            <param name="gameId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.GameController.Put(FantasyFD.Models.GameEdit)">
+            <summary>
+            Allows you to get a game by its ID. 
+            </summary>
+            <param name="game"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.GameController.Delete(System.Int32)">
+            <summary>
+            Allows you to edit a game.
+            </summary>
+            <param name="gameId"></param>
+            <returns></returns>
+        </member>
         <member name="T:FantasyFootballDreams.WebAPI.Controllers.PlayerController">
             <summary>
             wack
