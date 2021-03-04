@@ -22,6 +22,7 @@ namespace FantasyFootballDreams.WebAPI.Controllers
             var teamService = new TeamService(userName);
             return teamService;
         }
+
         /// <summary>
         /// This allows you to get all the Teams from the database.
         /// </summary>
