@@ -52,6 +52,18 @@ Safety BlockedKick
 
 ReturnTouchDown
 
+Games can be created with the following attributes:
+
+DateOfGame
+
+Games can be updated with the following attributes:
+
+HomeTeam AwayTeam
+
+HomeScore AwayScore
+
+GameId
+
 Sources:
 https://stackoverflow.com/questions/52478984/ef-6-0-many-to-many-relationship-is-not-working-in-codefirst
 https://stackoverflow.com/questions/37867659/cannot-insert-the-value-null-into-column-where-using-sql-select-statement/37867709
