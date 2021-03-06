@@ -481,6 +481,40 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.GetUserInfo">
+            <summary>
+            Get user account info.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.ChangePassword(FantasyFootballDreams.WebAPI.Models.ChangePasswordBindingModel)">
+            <summary>
+            CHange users password.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.SetPassword(FantasyFootballDreams.WebAPI.Models.SetPasswordBindingModel)">
+            <summary>
+            First initialization of users password.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.RemoveLogin(FantasyFootballDreams.WebAPI.Models.RemoveLoginBindingModel)">
+            <summary>
+            Remove user account and login capabilities.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.Register(FantasyFootballDreams.WebAPI.Models.RegisterBindingModel)">
+            <summary>
+            Register new account and assign Token.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
         <member name="T:FantasyFootballDreams.WebAPI.Controllers.GameController">
             <summary>
             Game Controller
@@ -559,19 +593,31 @@
             </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Get">
-            Looks up all Player Stats.
+            <summary> Looks up all Player Stats. </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Post(FantasyFD.Models.PlayerStats.CreatePlayerStats)">
-            Creates a Player Stat with specific information.
+            <summary> Creates a Player Stat with specific information. </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Get(System.Int32)">
-            Looks up a Player Stat by its ID.
+            <summary> Looks up a Player Stat by its ID. </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Put(FantasyFD.Models.PlayerStats.EditPlayerStats)">
-            Changes details about a Player Stat.
+            <summary> Changes details about a Player Stat. </summary>
         </member>
         <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsController.Delete(System.Int32)">
-            Deletes Player Stats by their ID.
+            <summary>Deletes Player Stats by their ID.</summary>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerStatsViewController.Create">
+            <summary>
+            LOOKUP: redirect to action (take to another page)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerViewController.Index">
+            <summary>GET: PlayerView </summary>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.PlayerViewController.Create">
+            <summary>This is where I get html from </summary> Create
         </member>
         <member name="T:FantasyFootballDreams.WebAPI.Controllers.TeamController">
             <summary>

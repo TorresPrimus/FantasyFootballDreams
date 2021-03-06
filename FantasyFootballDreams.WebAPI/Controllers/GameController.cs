@@ -19,9 +19,9 @@ namespace FantasyFootballDreams.WebAPI.Controllers
     {
         private GameService CreateGameService()
         {
-            var gameId = int.Parse(User.Identity.GetUserId());
-            var gameService = new GameService(gameId);
-            return  new GameService();
+            //var gameId = int.Parse(User.Identity.GetUserId());
+            //var gameService = new GameService(gameId);
+            return new GameService();
         }
         /// <summary>
         /// Allows you to get a certian game by its ID. 
