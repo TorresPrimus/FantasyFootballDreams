@@ -481,6 +481,40 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.GetUserInfo">
+            <summary>
+            Get user account info.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.ChangePassword(FantasyFootballDreams.WebAPI.Models.ChangePasswordBindingModel)">
+            <summary>
+            CHange users password.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.SetPassword(FantasyFootballDreams.WebAPI.Models.SetPasswordBindingModel)">
+            <summary>
+            First initialization of users password.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.RemoveLogin(FantasyFootballDreams.WebAPI.Models.RemoveLoginBindingModel)">
+            <summary>
+            Remove user account and login capabilities.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FantasyFootballDreams.WebAPI.Controllers.AccountController.Register(FantasyFootballDreams.WebAPI.Models.RegisterBindingModel)">
+            <summary>
+            Register new account and assign Token.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
         <member name="T:FantasyFootballDreams.WebAPI.Controllers.GameController">
             <summary>
             Game Controller
