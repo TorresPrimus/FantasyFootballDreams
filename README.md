@@ -64,6 +64,15 @@ HomeScore AwayScore
 
 GameId
 
+The database for holds the following information for each Team:
+[PK] TeamId
+TeamName
+Date for when team was created and also for when it is modified
+List of the players assigned to the team
+List of Games that the team has played
+
+The functions available are to view a specific teams details or all the teams, add a new team, edit any pre-existing teams name, as well as delete a team from the DB.
+
 Sources:
 https://stackoverflow.com/questions/52478984/ef-6-0-many-to-many-relationship-is-not-working-in-codefirst
 https://stackoverflow.com/questions/37867659/cannot-insert-the-value-null-into-column-where-using-sql-select-statement/37867709
