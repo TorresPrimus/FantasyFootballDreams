@@ -64,7 +64,7 @@ HomeScore AwayScore
 
 GameId
 
-The database for holds the following information for each Team:
+The database for TEAM holds the following information for each Team:
 [PK] TeamId
 TeamName
 Date for when team was created and also for when it is modified
